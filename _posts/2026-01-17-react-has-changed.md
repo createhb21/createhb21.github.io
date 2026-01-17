@@ -72,8 +72,8 @@ React는 이 둘을 서로 전혀 다른 방식으로 취급한다.
 
 사실 React가 제시하는 기본 규칙은 놀라울 만큼 단순하다.
 
-1. **진짜 사이드 이펙트(Side Effect)에만 `useEffect`를 사용하세요.** (외부 세계와의 상호작용: 네트워크 요청, DOM 조작, 구독 등)
-2. **그 외에는 렌더링 중에 계산하세요.** (Derived State)
+1. _**진짜 사이드 이펙트(Side Effect)에만 `useEffect`를 사용하세요.** (외부 세계와의 상호작용: 네트워크 요청, DOM 조작, 구독 등)_
+2. _**그 외에는 렌더링 중에 계산하세요.** (Derived State)_
 
 ```javascript
 // Good: useEffect 대신 useMemo 사용
@@ -97,7 +97,7 @@ const handleSave = useEffectEvent(async () => {
 
 후자라면, `useMemo`, `useCallback` 같은 도구나 프레임워크가 제공하는 기능을 사용하는 편이 컴포넌트를 훨씬 견고하게(robust) 만든다.
 
-> Note: `useEffectEvent`를 의존성 배열 규칙을 회피하기 위한 치트키로 쓰지는 말자. 이는 오직 Effect 내부 로직을 최적화하기 위해 설계된 도구이기 때문.
+> Note: `useEffectEvent`를 의존성 배열 규칙을 회피하기 위한 치트키로 쓰지는 말자. 이는 오직 Effect 내부 로직을 최적화하기 위해 설계된 도구이기 때문이다.
 
 <br/>
 
@@ -105,7 +105,7 @@ const handleSave = useEffectEvent(async () => {
 
 커스텀 훅은 단순히 중복 코드를 줄이는 게 아니다. **도메인 로직을 컴포넌트에서 뽑아내어, UI가 진짜 UI 역할에만 집중하게 만드는 것**이 핵심이다.
 
-예를 들어, 윈도우 리사이즈 이벤트 처리 로직을 컴포넌트에 직접 작성하면 코드가 난잡해집니다.
+예를 들어, 윈도우 리사이즈 이벤트 처리 로직을 컴포넌트에 직접 작성하면 코드가 난잡해진다.
 
 ```javascript
 // Bad: 컴포넌트 안에 섞여있는 로직
@@ -198,9 +198,9 @@ const filtered = useMemo(() => {
 
 Hook 구조를 잘 잡으면 실제 컴포넌트를 렌더링하지 않고도 로직 대부분을 테스트할 수 있다.
 
-- 도메인 로직을 UI와 분리해라.
-- 가능하면 Hook을 직접 테스트해라.
-- Provider 로직은 별도의 Hook으로 분리해 명확하게 정리해라.
+- _도메인 로직을 UI와 분리하세요._
+- _가능하면 Hook을 직접 테스트하세요._
+- _Provider 로직은 별도의 Hook으로 분리해 명확하게 정리하세요._
 
 ```javascript
 // Provider 로직 분리 예시

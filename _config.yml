@@ -9,7 +9,7 @@ cover: "" # image uri like logo/cover image for site seo
 
 google_analytics: G-P82C6FVXLH
 twitter_username: ""
-comments_enabled: false # if enabled (set to true), please provide your disqus_username
+comments_enabled: true # Giscus (GitHub Discussions based)
 disqus_shortname: ""
 postshare_enabled: false
 
