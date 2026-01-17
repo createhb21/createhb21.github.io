@@ -4,6 +4,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Font Preloading -->
+  <link rel="preload" href="{{ '/assets/fonts/FontAstaSans/AstaSans-Variable.woff2' | relative_url }}" as="font" type="font/woff2" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
   {% assign page_title = '' %}
   {% if page.title == "Home" %}
       {% capture page_title %}
