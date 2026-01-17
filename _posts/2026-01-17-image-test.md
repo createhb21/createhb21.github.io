@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Image Log Test"
+title: "Image Test"
 date: 2026-01-17 16:00:00 +0900
 categories: [100-private-log]
 thumbnail: /assets/postImages/TestThumbnail/playground-thumbnail.jpg

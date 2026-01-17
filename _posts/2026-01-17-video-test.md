@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Video Log Test"
+title: "Video Test"
 date: 2026-01-17 16:00:00 +0900
 categories: [100-private-log]
 video: /assets/videos/bodycodi-playground.mp4

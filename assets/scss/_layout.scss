@@ -99,6 +99,7 @@ hr {
   float: left;
   margin: 0 0 1em 0;
   cursor: pointer;
+  font-family: $heading-font-family;
   letter-spacing: 0.8px;
   font-size: 20px;
   line-height: 28px;
@@ -385,7 +386,7 @@ hr {
   cursor: pointer;
   color: $light-black-color;
   border-bottom: 2px solid transparent;
-  margin-bottom: -2px;
+  margin-bottom: -1px;
   font-weight: 600;
 
   &.active {
