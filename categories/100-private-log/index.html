@@ -9,31 +9,60 @@ permalink: /categories/100-private-log/
     <h1 class="font-mono">100 Private Log</h1>
     <p class="category-description">일상 기록</p>
 
-    <div class="post-list">
+    <div class="instagram-grid">
       {% assign category_posts = site.posts | where_exp: "post",
       "post.categories contains '100-private-log'" %} {% if category_posts.size
-      > 0 %} {% for post in category_posts %} {% if forloop.first %}
-      <h2 class="category-title font-mono">{{ post.date | date: '%Y' }}</h2>
-      {% else %} {% assign prev_post = category_posts[forloop.index0 | minus: 1]
-      %} {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %} {%
-      capture prev_year %}{{ prev_post.date | date: '%Y' }}{% endcapture %} {%
-      if year != prev_year %}
-      <h2 class="category-title font-mono">{{ post.date | date: '%Y' }}</h2>
-      {% endif %} {% endif %}
-      <article class="post-item">
-        <span class="post-meta date-label font-mono"
-          >{{ post.date | date: "%b %d" }}</span
+      > 0 %} {% for post in category_posts %}
+      <div class="instagram-item">
+        <a
+          class="post-link"
+          href="{{ post.url | prepend: site.baseurl | prepend: site.url }}"
         >
-        <div class="article-title font-mono">
-          <a
-            class="post-link"
-            href="{{ post.url | prepend: site.baseurl | prepend: site.url }}"
-            >{{ post.title }}</a
-          >
-        </div>
-      </article>
+          {% if post.video %} {% if post.video contains "http" %}
+          <video src="{{ post.video }}" autoplay muted loop playsinline></video>
+          {% else %}
+          <video
+            src="{{ post.video | relative_url }}"
+            autoplay
+            muted
+            loop
+            playsinline
+          ></video>
+          {% endif %}
+          <div class="video-icon">
+            <i class="fa fa-video-camera" aria-hidden="true"></i>
+          </div>
+          {% elsif post.thumbnail %} {% if post.thumbnail contains "http" %}
+          <img src="{{ post.thumbnail }}" alt="{{ post.title }}" />
+          {% else %}
+          <img
+            src="{{ post.thumbnail | relative_url }}"
+            alt="{{ post.title }}"
+          />
+          {% endif %} {% else %}
+          <!-- 썸네일이 없을 경우 기본 이미지 또는 첫 번째 이미지 추출 (여기서는 플레이스홀더 사용) -->
+          <img
+            src="https://placehold.co/400x400/efefef/999?text={{ post.title | truncate: 10 }}"
+            alt="{{ post.title }}"
+          />
+          {% endif %}
+
+          <!-- 호버 시 오버레이 (선택 사항) -->
+          <div class="overlay">
+            <div class="icon-overlay">
+              <!-- 하트 아이콘 예시 -->
+              <!-- <i class="fa fa-heart" aria-hidden="true"></i> -->
+            </div>
+          </div>
+        </a>
+      </div>
       {% endfor %} {% else %}
-      <p class="empty-message">아직 작성된 글이 없습니다.</p>
+      <p
+        class="empty-message"
+        style="grid-column: 1 / -1; text-align: center; padding: 2rem"
+      >
+        아직 작성된 글이 없습니다.
+      </p>
       {% endif %}
     </div>
   </div>
