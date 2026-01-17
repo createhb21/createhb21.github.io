@@ -1,0 +1,63 @@
+// Typography
+
+// English Font - Overpass Mono
+@import url("https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@400;700&display=swap");
+
+// Korean/Default Font - AstaSans
+@font-face {
+  font-family: "AstaSans";
+  src: url("/assets/fonts/FontAstaSans/AstaSans-Variable.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+// Font Variables
+// 기본 폰트: AstaSans 우선 (한글), Overpass Mono (영어 fallback)
+$base-font-family: "AstaSans", "Overpass Mono", sans-serif;
+// 헤더 폰트: Overpass Mono만 사용 (영어 스타일)
+$heading-font-family: "Overpass Mono", monospace;
+
+// Font Sizes
+$base-font-size: 1em;
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.2;
+
+// Other Sizes
+$base-border-radius: 0.52em;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 2;
+$base-z-index: 0;
+
+// Colors
+$primary-color: #000;
+$action-color: $primary-color;
+$white-color: #fff;
+$black-color: #000;
+$blue-color: #0086b3;
+$dark-gray-color: #333;
+$medium-gray-color: #999;
+$light-gray-color: #ccc;
+
+// Font Colors
+$base-font-color: rgba($dark-gray-color, 0.8);
+
+// Border
+$base-border-color: $light-gray-color;
+$base-border: 1px solid $base-border-color;
+
+// Background Colors
+$base-background-color: $white-color;
+$secondary-background-color: tint($base-border-color, 80%);
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba($black-color, 0.06);
+$form-box-shadow-focus:
+  $form-box-shadow,
+  0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+
+// Animations
+$base-duration: 150ms;
+$base-timing: ease;
