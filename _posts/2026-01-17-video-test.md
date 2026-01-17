@@ -7,7 +7,7 @@ video: /assets/videos/bodycodi-playground.mp4
 tags: [video, test, playground]
 ---
 
-<video width="100%" controls>
+<video width="100%" controls poster="{{ '/assets/postImages/TestThumbnail/playground-thumbnail.jpg' | relative_url }}" playsinline preload="metadata">
   <source src="{{ '/assets/videos/bodycodi-playground.mp4' | relative_url }}" type="video/mp4">
   Your browser does not support the video tag.
 </video>

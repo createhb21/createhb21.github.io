@@ -454,9 +454,14 @@ hr {
   gap: 4px; // 인스타그램 특유의 좁은 간격
   margin-top: 2rem;
 
-  @media (max-width: 600px) {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(3, 1fr); // 모바일에서도 3열 유지
-    gap: 2px;
+    gap: 1px; // 간격 최소화
+
+    // 컨테이너 패딩($base-spacing: 1.5em) 상쇄하여 꽉 찬 화면 구현
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    width: calc(100% + 3em);
   }
 }
 
