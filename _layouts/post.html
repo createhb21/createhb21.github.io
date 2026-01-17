@@ -9,6 +9,12 @@ layout: default
 >
   <header class="post-header">
     <p class="post-meta font-mono">
+      {% if page.categories.size > 0 %} {% assign cat = page.categories | first
+      %}
+      <a href="{{ site.baseurl }}/categories/{{ cat }}/" class="post-category"
+        >{{ cat }}</a
+      >
+      &middot; {% endif %}
       <time
         datetime="{{ page.date | date_to_xmlschema }}"
         itemprop="datePublished"

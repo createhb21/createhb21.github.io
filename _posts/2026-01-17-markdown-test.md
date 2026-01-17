@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Markdown Test
-categories: [Test]
+categories: [200-pick-up]
 tags: [markdown, test]
 ---
 

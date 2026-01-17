@@ -1,0 +1,40 @@
+---
+layout: default
+title: "600 Archive"
+permalink: /categories/600-archive/
+---
+
+<section class="category-page">
+  <div class="container" style="max-width: 1100px">
+    <h1 class="font-mono">600 Archive</h1>
+    <p class="category-description">보관된 자료 및 레퍼런스</p>
+
+    <div class="post-list">
+      {% assign category_posts = site.posts | where_exp: "post",
+      "post.categories contains '600-archive'" %} {% if category_posts.size > 0
+      %} {% for post in category_posts %} {% if forloop.first %}
+      <h2 class="category-title font-mono">{{ post.date | date: '%Y' }}</h2>
+      {% else %} {% assign prev_post = category_posts[forloop.index0 | minus: 1]
+      %} {% capture year %}{{ post.date | date: '%Y' }}{% endcapture %} {%
+      capture prev_year %}{{ prev_post.date | date: '%Y' }}{% endcapture %} {%
+      if year != prev_year %}
+      <h2 class="category-title font-mono">{{ post.date | date: '%Y' }}</h2>
+      {% endif %} {% endif %}
+      <article class="post-item">
+        <span class="post-meta date-label font-mono"
+          >{{ post.date | date: "%b %d" }}</span
+        >
+        <div class="article-title font-mono">
+          <a
+            class="post-link"
+            href="{{ post.url | prepend: site.baseurl | prepend: site.url }}"
+            >{{ post.title }}</a
+          >
+        </div>
+      </article>
+      {% endfor %} {% else %}
+      <p class="empty-message">아직 작성된 글이 없습니다.</p>
+      {% endif %}
+    </div>
+  </div>
+</section>
