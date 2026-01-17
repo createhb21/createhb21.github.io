@@ -2,12 +2,12 @@
 title_left: "MyLifeFrom"
 title_right: "Coding" # default: ""
 description: "Hyobum Lee Blog."
-keywords: "SEO, blog, web, mylifefromcoding, developer, frontend, os, network, cs, engineer"
+keywords: "development, frontend, react, nextjs, javascript, typescript, architecture, web, engineering, blog, hyobum lee, 이효범"
 url: https://createhb21.github.io # site url
 baseurl: "" # apply repo name like "/myproject" if used under gh-pages branch, else (under master branch) just leave empty/blank
 cover: "" # image uri like logo/cover image for site seo
 
-google_analytics: UA-XXXXX-XX
+google_analytics: G-P82C6FVXLH
 twitter_username: ""
 comments_enabled: false # if enabled (set to true), please provide your disqus_username
 disqus_shortname: ""
