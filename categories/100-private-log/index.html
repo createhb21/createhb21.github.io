@@ -19,7 +19,20 @@ permalink: /categories/100-private-log/
           href="{{ post.url | prepend: site.baseurl | prepend: site.url }}"
         >
           {% if post.video %} {% if post.video contains "http" %}
-          <video src="{{ post.video }}" autoplay muted loop playsinline></video>
+          <video
+            src="{{ post.video }}"
+            autoplay
+            muted
+            loop
+            playsinline{%
+            if
+            post.poster
+            %}
+            poster="{{ post.poster }}"
+            {%
+            endif
+            %}
+          ></video>
           {% else %}
           <video
             src="{{ post.video | relative_url }}"
@@ -27,6 +40,13 @@ permalink: /categories/100-private-log/
             muted
             loop
             playsinline
+            {%
+            if
+            post.poster
+            %}poster="{{ post.poster | relative_url }}"
+            {%
+            endif
+            %}
           ></video>
           {% endif %}
           <div class="video-icon">
