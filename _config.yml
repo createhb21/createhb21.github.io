@@ -1,6 +1,6 @@
 # Site settings
-title_left: "MyLifeFrom"
-title_right: "Coding" # default: ""
+title_left: "Coding"
+title_right: "AtTheBottom"
 description: "Hyobum Lee Blog."
 keywords: "development, frontend, react, nextjs, javascript, typescript, architecture, web, engineering, blog, hyobum lee, 이효범"
 url: https://createhb21.github.io # site url
