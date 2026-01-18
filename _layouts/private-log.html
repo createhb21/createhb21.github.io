@@ -1,0 +1,115 @@
+---
+layout: default
+---
+
+<article
+  class="private-log-detail"
+  itemscope
+  itemtype="http://schema.org/BlogPosting"
+>
+  <div class="private-log-container">
+    <!-- Left: Media Area -->
+    <div class="private-log-media">
+      {% if page.video %}
+      <video
+        autoplay
+        controls
+        playsinline
+        preload="metadata"
+        {%
+        if
+        page.poster
+        %}poster="{{ page.poster | relative_url }}"
+        {%
+        endif
+        %}
+      >
+        <source src="{{ page.video | relative_url }}" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      {% elsif page.thumbnail %}
+      <img src="{{ page.thumbnail | relative_url }}" alt="{{ page.title }}" />
+      {% endif %}
+    </div>
+
+    <!-- Right: Meta + Content -->
+    <div class="private-log-content">
+      <div class="private-log-header">
+        <div class="private-log-meta font-mono">
+          <!-- {% if page.categories.size > 0 %} {% assign cat = page.categories |
+          first %}
+          <a
+            href="{{ site.baseurl }}/categories/{{ cat }}/"
+            class="private-log-category"
+            >{{ cat }}</a
+          >
+          {% endif %} -->
+          <h2 class="private-log-category">createhb21</h2>
+          <time
+            datetime="{{ page.date | date_to_xmlschema }}"
+            itemprop="datePublished"
+          >
+            {{ page.date | date: "%Y년 %-m월 %-d일" }}
+          </time>
+        </div>
+      </div>
+
+      <div class="private-log-body" itemprop="articleBody">{{ content }}</div>
+
+      <!-- {% if page.tags.size > 0 %}
+      <div class="private-log-tags">
+        {% for tag in page.tags %}
+        <span class="tag">#{{ tag }}</span>
+        {% endfor %}
+      </div>
+      {% endif %} -->
+    </div>
+  </div>
+
+  <!-- More Posts Section -->
+  {% assign category_posts = site.posts | where_exp: "post", "post.categories
+  contains '100-private-log'" %} {% assign other_posts = category_posts |
+  where_exp: "post", "post.url != page.url" %} {% if other_posts.size > 0 %}
+  <div class="more-posts-section">
+    <h3 class="more-posts-title font-mono">게시물 더 보기</h3>
+    <div class="more-posts-grid">
+      {% for post in other_posts limit:6 %}
+      <a href="{{ post.url | prepend: site.baseurl }}" class="more-post-item">
+        {% if post.video %}
+        <video
+          src="{{ post.video | relative_url }}"
+          muted
+          loop
+          playsinline
+          {%
+          if
+          post.poster
+          %}poster="{{ post.poster | relative_url }}"
+          {%
+          endif
+          %}
+          onmouseenter="this.play()"
+          onmouseleave="
+            this.pause();
+            this.currentTime = 0;
+          "
+        ></video>
+        <div class="video-icon">
+          <i class="fa fa-video-camera" aria-hidden="true"></i>
+        </div>
+        {% elsif post.thumbnail %}
+        <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" />
+        {% else %}
+        <img
+          src="https://placehold.co/400x400/efefef/999?text={{ post.title | truncate: 10 }}"
+          alt="{{ post.title }}"
+        />
+        {% endif %}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+</article>
+
+{% include comments.html %}
