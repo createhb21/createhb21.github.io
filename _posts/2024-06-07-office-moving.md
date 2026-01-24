@@ -7,13 +7,4 @@ thumbnail: /assets/images/bodycodi/office-moving-thumnail.jpg
 tags: [bodycodi, office]
 ---
 
-했어요!!!
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/><br/>
-<br/>
-<br/><br/><br/><br/><br/>
-사무실 이사했어요!!!!!
+사무실 이사했어요.
