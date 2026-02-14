@@ -14,6 +14,7 @@ tags:
     translation,
     architecture,
   ]
+description: "React 18/19 시대에 맞는 Hook 사용법. useEffect 남용을 줄이고 useSyncExternalStore, useDeferredValue 등 현대적 패턴을 활용하자."
 ---
 
 ### 서론

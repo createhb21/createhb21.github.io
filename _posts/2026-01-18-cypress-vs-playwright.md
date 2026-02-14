@@ -4,6 +4,7 @@ title: "(번역) Cypress vs Playwright: 500개의 E2E 테스트를 돌려봤다"
 date: 2026-01-18 00:30:00 +0900
 categories: [600-archive]
 tags: [testing, e2e, cypress, playwright, frontend, QA, CI, translation]
+description: "500개의 E2E 테스트를 Cypress에서 Playwright로 마이그레이션한 실제 경험담. 속도, 안정성, 디버깅 등 솔직한 비교."
 ---
 
 ### 서론

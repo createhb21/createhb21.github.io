@@ -5,6 +5,7 @@ date: 2025-12-11 21:00:00 +0900
 categories: [000-index]
 tags:
   [frontend, interview, react, nextjs, architecture, devops, trouble-shooting]
+description: "React, Next.js, MFE, 모노레포, CI/CD, 성능 최적화 등 프론트엔드 심화 면접 질문 모음. 스스로에게 자주 묻는 질문들."
 ---
 
 _요즘 스스로에게 자주 묻는 질문들, 잘 대답할 수 있는지 확인하기 위한 글_

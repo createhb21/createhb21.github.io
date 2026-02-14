@@ -4,6 +4,7 @@ title: "핸드폰으로 Claude Code 작업 확인하고 진행하는 법"
 date: 2026-02-14 12:00:00 +0900
 categories: [200-pick-up]
 tags: [ai, claude-code, remote-desktop, chrome, mobile, productivity]
+description: "Chrome 원격 데스크톱을 활용하면 핸드폰에서도 Claude Code 등 AI CLI 도구의 작업을 확인하고 진행할 수 있다."
 ---
 
 Claude Code 등 AI CLI 도구로 작업하다 보면, 항상 컴퓨터 앞에 앉아 있어야 한다는 제약이 있다. 터미널에서 돌아가는 도구 특성상, 진행 상황을 확인하거나 승인이 필요한 작업을 처리하려면 데스크톱이 필수였다.

@@ -4,6 +4,7 @@ title: "Ralph Loop: Claude Code로 자율 코딩 루프 돌려본 후기"
 date: 2026-02-10 11:00:00 +0900
 categories: [400-area]
 tags: [ai, claude-code, ralph-loop, automation, dx, productivity]
+description: "Ralph Loop은 Claude Code CLI에 같은 프롬프트를 무한 반복시켜 사람 개입 없이 자율 코딩을 돌리는 기법이다. 직접 세팅하고 돌려본 경험을 정리했다."
 ---
 
 AI 코딩 도구를 안 쓰는 개발자가 오히려 드물어진 시대다. Cursor, Claude Code, Copilot... 도구 자체는 이미 일상이 되었는데, 쓰다 보면 하나의 병목이 반복된다.

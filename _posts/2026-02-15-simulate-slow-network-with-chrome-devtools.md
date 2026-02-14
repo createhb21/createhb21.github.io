@@ -4,6 +4,7 @@ title: "크롬 개발자도구로 느린 네트워크 환경 재현하기"
 date: 2026-02-14 13:00:00 +0900
 categories: [200-pick-up]
 tags: [chrome, devtools, network, throttling, debugging, ux]
+description: "크롬 개발자도구의 Network Throttling으로 느린 네트워크 환경을 재현하여 고객이 겪는 UX 문제를 미리 발견하는 방법."
 ---
 
 우리가 개발할 때는 보통 빠른 Wi-Fi 환경에서 작업한다. 그래서 앱이 항상 빠르게 느껴진다.
