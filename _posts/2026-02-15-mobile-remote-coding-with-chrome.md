@@ -10,7 +10,7 @@ Claude Code 등 AI CLI 도구로 작업하다 보면, 항상 컴퓨터 앞에 �
 
 그런데 이걸 핸드폰에서도 할 수 있는 방법을 발견했다.
 
-![핸드폰에서 Chrome 원격 데스크톱으로 Claude Code 작업 확인](/assets/images/etc/remote-coding/mobile-remote-desktop.jpg)
+![핸드폰에서 Chrome 원격 데스크톱으로 Claude Code 작업 확인](/assets/images/etc/remote-coding-mobile/mobile-remote-desktop.jpg)
 
 ---
 

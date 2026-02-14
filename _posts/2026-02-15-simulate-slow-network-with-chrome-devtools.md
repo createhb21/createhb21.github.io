@@ -27,7 +27,7 @@ tags: [chrome, devtools, network, throttling, debugging, ux]
 3. 좌측 메뉴에서 **Throttling** 선택
 4. **Add profile** 클릭 후 커스텀 프로필 생성
 
-![크롬 개발자도구 Network Throttling 설정 화면](/assets/images/etc/slow-network/chrome-network-throttling.png)
+![크롬 개발자도구 Network Throttling 설정 화면](/assets/images/etc/slow-network-throttling/chrome-network-throttling.png)
 
 ### 커스텀 프로필 예시
 
