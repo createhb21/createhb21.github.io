@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "TS 0% 코드베이스에서 버티는 팀으로: 점진 전환의 실제 순서"
-date: 2026-02-23 11:00:00 +0900
+date: 2026-02-16 11:00:00 +0900
 categories: [300-project]
 tags: [typescript, migration, frontend, legacy, quality]
 description: "TypeScript 0%에 가까운 상태에서 전면 재작업 없이 점진적으로 타입 안정성을 확보한 전환 전략."

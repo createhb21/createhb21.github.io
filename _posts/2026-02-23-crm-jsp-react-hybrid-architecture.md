@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "JSP-only CRM을 한 번에 버리지 않은 이유"
-date: 2026-02-23 16:00:00 +0900
+date: 2026-02-16 16:00:00 +0900
 categories: [300-project]
 tags: [crm, jsp, react, migration, architecture]
 description: "CRM을 JSP-only에서 React+JSP 하이브리드로 전환하며, 빅뱅 마이그레이션 대신 공존 전략을 택한 이유와 결과."

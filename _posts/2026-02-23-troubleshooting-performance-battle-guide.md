@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "난해한 버그를 만났을 때 내가 쓰는 추적 순서 (메모리/하드웨어/성능)"
-date: 2026-02-23 22:40:00 +0900
+date: 2026-02-16 22:40:00 +0900
 categories: [400-area]
 tags: [debugging, performance, memory, kiosk, sourcemap]
 description: "메모리 누수, 하드웨어 특화 장애, 소스맵 분기, 저사양 성능 이슈를 추적할 때 실제로 쓰는 순서를 기록했다."

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "배포를 ‘버튼 클릭’이 아니라 ‘복구 가능한 절차’로 설계하기"
-date: 2026-02-23 22:20:00 +0900
+date: 2026-02-16 22:20:00 +0900
 categories: [400-area]
 tags: [devops, deployment, rollback, kiosk, webview, semver]
 description: "CI/CD, 버저닝, 브라우저 타겟, 하이브리드 리로드, 롤백까지 배포 안정성을 만드는 실전 관점을 정리했다."

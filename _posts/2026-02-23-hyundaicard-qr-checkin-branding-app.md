@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "QR 체크인 + 브랜딩 앱을 반복 생산 가능한 형태로 만든 방법"
-date: 2026-02-23 20:00:00 +0900
+date: 2026-02-16 20:00:00 +0900
 categories: [300-project]
 tags: [qr, checkin, branding, white-label, frontend]
 description: "현대카드 계열 이벤트 도메인에서 QR 체크인과 브랜딩 앱을 빠르고 안전하게 반복 출시하기 위해 정리한 구조."

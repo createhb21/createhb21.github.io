@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Next.js/React 심화 질문, 내가 실제로 답하는 방식"
-date: 2026-02-23 21:30:00 +0900
+date: 2026-02-16 21:30:00 +0900
 categories: [400-area]
 tags: [nextjs, react, suspense, rsc, stale-closure, interview]
 description: "next/image, Suspense, RSC 경계, preload/prefetch, staleTime/gcTime, stale closure를 실무 기준으로 답변한 노트."

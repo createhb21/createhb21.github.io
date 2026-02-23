@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "기타 기술 질문 모음인데, 사실은 다 기본기 질문이다"
-date: 2026-02-23 23:40:00 +0900
+date: 2026-02-16 23:40:00 +0900
 categories: [400-area]
 tags: [cors, env, middleware, typescript, mobile-web, basics]
 description: "Bounce, CORS, env, JS->TS, Next.js Middleware 같은 기타 질문을 실무 기준으로 빠르게 정리했다."

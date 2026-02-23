@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "화이트스크린 사건 보고서: ‘코드를 못 봐도’ 원인을 끝까지 찾았던 방법"
-date: 2026-02-23 23:00:00 +0900
+date: 2026-02-16 23:00:00 +0900
 categories: [400-area]
 tags: [electron, kiosk, star, incident, troubleshooting]
 description: "외주 코드 접근 불가 상태에서 일렉트론 키오스크 화이트스크린 문제를 재현하고 해결한 STAR 기반 문제 해결 기록."

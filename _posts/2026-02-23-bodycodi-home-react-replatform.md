@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "바디코디 홈페이지를 React로 옮길 때, ‘기술 교체’보다 크게 본 것"
-date: 2026-02-23 14:00:00 +0900
+date: 2026-02-16 14:00:00 +0900
 categories: [300-project]
 tags: [bodycodi, react, replatform, frontend, maintainability]
 description: "바디코디 홈페이지를 React 프로젝트로 재구축하며 페이지 생산성과 운영 안정성을 함께 잡은 경험을 풀어냈다."

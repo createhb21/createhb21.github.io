@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "피처 단위 개발이 CRM 납기를 살린 방식 (골프 스케줄러/대시보드/기기등록)"
-date: 2026-02-23 17:00:00 +0900
+date: 2026-02-16 17:00:00 +0900
 categories: [300-project]
 tags: [crm, feature-unit, dashboard, scheduler, frontend]
 description: "페이지 단위가 아닌 피처 단위 개발 체계를 도입해 CRM 기능 확장과 납기 예측 가능성을 높인 실제 사례."

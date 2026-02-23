@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "MFE/모노레포 질문에서 진짜 검증되는 것"
-date: 2026-02-23 22:00:00 +0900
+date: 2026-02-16 22:00:00 +0900
 categories: [400-area]
 tags: [mfe, monorepo, nx, turborepo, auth, deployment]
 description: "MFE 입자 크기, 인증 동기화, 브랜치 전략, affected build, 공통 라이브러리 설계를 운영 관점으로 설명했다."

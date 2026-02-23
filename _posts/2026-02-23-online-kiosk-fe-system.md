@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "온라인 키오스크 FE 시스템, 결국은 ‘운영 런북’까지 포함해야 완성된다"
-date: 2026-02-23 19:00:00 +0900
+date: 2026-02-16 19:00:00 +0900
 categories: [300-project]
 tags: [kiosk, deployment, testing, runbook, frontend]
 description: "온라인 키오스크 FE 시스템을 구축하며 개발/배포/테스트를 하나의 운영 사이클로 연결한 방법을 정리했다."

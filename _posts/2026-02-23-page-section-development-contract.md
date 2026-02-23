@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "‘이 정도면 됐죠?’를 없애기 위한 페이지/섹션 계약서"
-date: 2026-02-23 15:00:00 +0900
+date: 2026-02-16 15:00:00 +0900
 categories: [300-project]
 tags: [frontend, qa, design, collaboration, contract]
 description: "개발-디자인-QA 사이의 완료 기준 차이를 줄이기 위해 도입한 페이지/섹션 계약 방식과 효과를 정리했다."

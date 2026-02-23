@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "아난다 요가 티켓팅: 오픈 성공보다 어려웠던 건 ‘완주율’이었다"
-date: 2026-02-23 18:00:00 +0900
+date: 2026-02-16 18:00:00 +0900
 categories: [300-project]
 tags: [ticketing, ux, conversion, mobile, frontend]
 description: "아난다 요가 티켓팅 기능을 오픈한 뒤, UX 병목을 줄여 앱 스토어 순위 10위권까지 끌어올린 개선 기록."

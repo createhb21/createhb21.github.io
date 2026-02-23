@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sentry 도입에서 진짜로 바꾼 것: 에러 로그가 아니라 팀의 대응 속도"
-date: 2026-02-23 10:00:00 +0900
+date: 2026-02-16 10:00:00 +0900
 categories: [300-project]
 tags: [sentry, observability, frontend, incident, cs]
 description: "회원 앱에 Sentry를 도입하면서 장애를 CS 이후가 아니라 CS 이전에 발견하도록 대응 체계를 바꾼 기록."

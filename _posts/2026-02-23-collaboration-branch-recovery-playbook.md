@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "잘못 머지된 브랜치를 살릴 때, 기술보다 먼저 해야 할 일"
-date: 2026-02-23 23:20:00 +0900
+date: 2026-02-16 23:20:00 +0900
 categories: [400-area]
 tags: [git, collaboration, incident-response, process]
 description: "핵심 브랜치 오염 사고에서 안전하게 복구하고 재발을 막기 위해 팀에 적용한 대응 순서를 정리했다."

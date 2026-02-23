@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "골프 예약/자동 대기열에서 배운 것: ‘가능’이라고 보여주는 순간의 책임"
-date: 2026-02-23 12:00:00 +0900
+date: 2026-02-16 12:00:00 +0900
 categories: [300-project]
 tags: [reservation, queue, concurrency, ux, frontend]
 description: "골프 예약과 자동 대기열 기능을 구현하며 동시성 충돌과 사용자 신뢰를 함께 다뤘던 실전 기록."

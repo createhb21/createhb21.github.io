@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "디자인 시스템을 다시 세울 때, 컴포넌트보다 먼저 정리한 것들"
-date: 2026-02-23 13:00:00 +0900
+date: 2026-02-16 13:00:00 +0900
 categories: [300-project]
 tags: [design-system, playground, component, token, frontend]
 description: "흩어진 디자인 시스템을 재정립하고 Playground를 통해 커스터마이징 속도와 일관성을 동시에 올린 과정."

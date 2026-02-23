@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "바디코디 2.0 리딩 메모: 3년차 FE가 맡은 건 코드보다 결정이었다"
-date: 2026-02-23 21:00:00 +0900
+date: 2026-02-16 21:00:00 +0900
 categories: [300-project]
 tags: [bodycodi, tech-lead, frontend, leadership, process]
 description: "바디코디 2.0 시스템 구축을 리딩하며 기술·일정·협업 사이에서 실제로 내려야 했던 결정들을 기록했다."

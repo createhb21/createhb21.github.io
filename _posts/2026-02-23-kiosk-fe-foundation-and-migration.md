@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "7스튜디오 키오스크 앱을 ‘납품물’이 아니라 ‘운영 시스템’으로 바꾼 과정"
-date: 2026-02-23 09:00:00 +0900
+date: 2026-02-16 09:00:00 +0900
 categories: [300-project]
 tags: [kiosk, frontend, architecture, migration, white-label]
 description: "7스튜디오 키오스크 FE를 운영 가능한 시스템으로 바꾸며, 확장성과 유지보수성을 확보한 의사결정 기록."
