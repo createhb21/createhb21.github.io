@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "바이브 코딩 클럽 - Basic 코스 2주차: No Code 자동화와 n8n"
+title: "n8n으로 시작하는 노코드 자동화 입문"
 date: 2026-02-15 19:00:00 +0900
 categories: [400-area]
 tags: [ai, no-code, n8n, automation, docker, vibe-coding, workflow]

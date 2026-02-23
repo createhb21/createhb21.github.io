@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "바이브 코딩 클럽 - Basic 코스 3주차: AI로 콘텐츠 만들기"
+title: "Suno로 만드는 AI 음악 콘텐츠 실습"
 date: 2026-02-15 20:00:00 +0900
 categories: [400-area]
 tags: [ai, suno, music, content-creation, vibe-coding, generative-ai]

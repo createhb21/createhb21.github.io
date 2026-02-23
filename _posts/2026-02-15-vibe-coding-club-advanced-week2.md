@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "바이브 코딩 클럽 - Advanced 코스 2주차: 멀티모달 AI와 네이티브 추론 원리"
+title: "멀티모달 AI와 네이티브 추론 원리"
 date: 2026-02-15 22:00:00 +0900
 categories: [400-area]
 tags: [ai, multimodal, sora, notebooklm, gemini, transformer, vibe-coding]

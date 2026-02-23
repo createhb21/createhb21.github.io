@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "바이브 코딩 클럽 - Advanced 코스 1주차: 에이전트 아키텍처와 MCP"
+title: "에이전트 아키텍처와 MCP: ReAct부터 Function Calling까지"
 date: 2026-02-15 21:00:00 +0900
 categories: [400-area]
 tags: [ai, agent, react-loop, function-calling, mcp, llm, vibe-coding, gemini]

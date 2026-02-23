@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "바이브 코딩 클럽 - Basic 코스 1주차: 에이전트적 사고의 시작"
+title: "AI 에이전트 입문: P-C-T-C 프롬프트 설계"
 date: 2026-02-15 18:00:00 +0900
 categories: [400-area]
 tags: [ai, agent, prompt-engineering, vibe-coding, llm, cot, structured-prompt]
