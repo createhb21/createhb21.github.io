@@ -46,3 +46,44 @@ description: "바디코디 홈페이지를 React 프로젝트로 재구축하며
 이 글을 요약하면 한 줄이다.
 
 > 리플랫폼은 프레임워크를 바꾸는 일이 아니라, 변경 비용 곡선을 바꾸는 일이다.
+
+## 리플랫폼 설계를 검증할 때 사용한 외부 기준
+
+이번 리플랫폼에서 가장 조심한 건 "React로 바꾸면 좋아진다"는 식의 낙관이었다. 프레임워크 변경 자체는 개선을 보장하지 않는다. 그래서 성과를 코드 스타일이 아니라 사용자 지표와 운영 지표로 검증했다.
+
+사용자 체감은 Core Web Vitals를 기준으로 봤다. 특히 초기 랜딩 페이지의 LCP와 CLS를 중심으로 섹션 조합 전략을 손봤다([Web Vitals](https://web.dev/articles/vitals), [LCP](https://web.dev/articles/lcp), [CLS](https://web.dev/articles/cls)). 히어로 영역은 콘텐츠 우선 로딩으로 재배치하고, 동적으로 바뀌는 배너 영역은 레이아웃 고정 박스를 먼저 잡아 화면 이동을 줄였다.
+
+React 아키텍처 관점에서는 컴포넌트 책임을 "표현"과 "조합"으로 나눴다. React 공식 문서가 강조하는 컴포넌트/상태 분리 원칙을 그대로 적용해([React Docs](https://react.dev/learn)), 섹션 컴포넌트는 도메인 의도를 캡슐화하고 페이지는 섹션 순서와 데이터 조립에 집중하게 만들었다. 이 구조는 신규 페이지 제작 속도뿐 아니라 리뷰 품질에도 영향을 줬다. 리뷰에서 스타일 재작업보다 정보 구조 논의가 훨씬 많아졌다.
+
+운영 환경 차이는 12-Factor의 config 분리 원칙으로 해결했다([12-Factor Config](https://12factor.net/config)). 환경별 엔드포인트/토글/카피를 코드 분기 대신 설정으로 이동시키니, 같은 빌드 아티팩트를 여러 환경에서 안정적으로 재사용할 수 있었다. 리플랫폼 이후 배포 실패가 줄어든 이유도 여기서 나왔다.
+
+마지막으로 문서화/테스트 체계를 Storybook 방식으로 보강해 변경 회귀를 줄였다([Storybook Tests](https://storybook.js.org/docs/writing-tests), [Build Documentation](https://storybook.js.org/docs/writing-docs/build-documentation)). 개발 생산성은 결국 구현 속도보다 수정 안정성에서 나온다는 걸 이 과정에서 다시 확인했다.
+
+## 참고자료
+- [React Docs - Learn](https://react.dev/learn)
+- [web.dev - Web Vitals](https://web.dev/articles/vitals)
+- [web.dev - Largest Contentful Paint](https://web.dev/articles/lcp)
+- [web.dev - Cumulative Layout Shift](https://web.dev/articles/cls)
+- [12-Factor App - Config](https://12factor.net/config)
+- [Storybook - Writing Tests](https://storybook.js.org/docs/writing-tests)
+- [Storybook - Build Documentation](https://storybook.js.org/docs/writing-docs/build-documentation)
+
+## 리플랫폼 이후 제가 계속 추적하는 품질 항목
+
+리플랫폼이 끝났다고 해서 개선이 끝나는 건 아니었다. 오히려 그 시점부터 진짜 운영이 시작됐다. 저는 초기 성공 지표만 보고 안심하지 않으려고, 분기 단위로 품질 항목을 추적하고 있다.
+
+첫 번째는 변경 리드타임이다. 신규 섹션을 추가할 때 기획 확정부터 배포까지 걸리는 시간이 줄었는지 본다. 이 수치가 줄지 않으면 구조 개선 효과가 제한적일 가능성이 크다. 두 번째는 회귀 버그 비율이다. 같은 유형의 UI 파손이 반복되면 컴포넌트 계약이 아직 약하다는 신호로 본다.
+
+세 번째는 콘텐츠 운영 편의성이다. 마케팅/운영팀이 텍스트나 배너를 변경할 때 개발 개입이 얼마나 필요한지 측정한다. 리플랫폼 목표 중 하나가 운영 자율성 확대였기 때문에, 이 항목은 기술 지표만큼 중요하게 보고 있다.
+
+개인적으로는 과거에 구조를 너무 크게 설계해 오히려 팀이 이해하기 어려웠던 경험이 있다. 그래서 최근에는 "복잡한 정답"보다 "팀이 유지할 수 있는 단순함"을 우선한다. 필요한 추상화만 남기고, 설명이 어려운 추상화는 과감히 걷어내고 있다.
+
+## 다음 개선 루프에서 시도할 것
+
+- 섹션 템플릿 표준화(신규 페이지 착수 시간 단축)
+- 공통 상태 컴포넌트(로딩/에러/빈 상태) 재사용 강화
+- 접근성 점검 항목을 배포 체크리스트에 통합
+- 운영팀용 변경 가이드 문서 보강
+- 회귀 이슈 상위 3개에 대한 구조적 대응
+
+제가 이 프로젝트에서 얻은 교훈은, 리플랫폼의 성패가 기술 선택 그 자체보다 "변경 이후 운영 경험"으로 결정된다는 점이었다. 그래서 앞으로도 출시 순간보다 출시 이후 반복 개선에 더 큰 무게를 두려고 한다.

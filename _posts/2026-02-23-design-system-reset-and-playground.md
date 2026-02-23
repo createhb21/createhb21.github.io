@@ -53,3 +53,41 @@ Playground에서 상태/변형을 즉시 확인하니까
 
 디자인 시스템의 목표는 "예쁜 공통 UI"가 아니라,
 **반복되는 변경을 안전하게 처리하는 능력**이다.
+
+## 토큰/컴포넌트/문서화를 동시에 고친 이유
+
+디자인 시스템 재정비를 하면서 가장 먼저 합의한 건 "컴포넌트 개수"가 아니라 "표현 계약"이었다. 색/간격/타이포를 코드 값으로 두면 프로젝트가 늘어날수록 변경 파편화가 심해진다. 그래서 토큰 표준 논의를 참고해 primitive-semantic-component 계층을 나눴다([Design Tokens](https://www.designtokens.org/), [Format Module](https://tr.designtokens.org/format/)).
+
+두 번째는 검증 방식이었다. 문서만 있으면 최신성이 떨어지고, 코드만 있으면 맥락이 사라진다. 그래서 Storybook 기반으로 문서와 테스트를 함께 유지하는 방향을 택했다([Storybook Build Documentation](https://storybook.js.org/docs/writing-docs/build-documentation), [Storybook Writing Tests](https://storybook.js.org/docs/writing-tests)). 이 구조에서는 컴포넌트 변경 시 문서와 테스트가 동시에 깨지기 때문에, 자연스럽게 계약 불일치가 조기 발견된다.
+
+세 번째는 상태 모델이었다. 디자인 시스템에서 실제 장애를 만들기 쉬운 건 기본 상태가 아니라 변형 상태다. loading, error, disabled, empty를 계약 대상에 올리지 않으면, 런타임에서 화면 일관성이 빠르게 무너진다. 그래서 섹션 단위로 "정상 상태"보다 "실패 상태"를 먼저 설계했다.
+
+이 과정을 거치고 나서 커스터마이징 요청 처리 속도가 좋아진 이유는 간단했다. 바꿀 수 있는 영역과 바꿀 수 없는 영역이 명확해졌고, 그 경계가 코드와 문서에 동시에 남았기 때문이다. 디자인 시스템은 결과물이 아니라 운영 체계라는 사실을 이 프로젝트에서 가장 크게 체감했다.
+
+## 참고자료
+- [Design Tokens Community Group](https://www.designtokens.org/)
+- [Design Tokens Format Module](https://tr.designtokens.org/format/)
+- [Storybook - Build Documentation](https://storybook.js.org/docs/writing-docs/build-documentation)
+- [Storybook - Writing Tests](https://storybook.js.org/docs/writing-tests)
+- [Google Testing Blog - End-to-End Tests](https://testing.googleblog.com/2015/04/just-say-no-to-more-end-to-end-tests.html)
+- [React Docs - Learn](https://react.dev/learn)
+
+## 정리된 시스템을 오래 유지하기 위한 현실적인 장치
+
+디자인 시스템을 만들 때보다 유지할 때가 훨씬 어렵다. 초기에 잘 만들어도 일정이 바빠지면 각 팀이 빠른 우회를 선택하고, 그 우회가 쌓이면 시스템은 빠르게 무너진다. 저도 그 과정을 여러 번 봤고, 그래서 최근에는 "좋은 설계"보다 "무너지지 않는 운영"에 더 신경 쓰고 있다.
+
+제가 먼저 한 일은 규칙을 줄이는 것이었다. 모든 경우를 통제하려고 하면 팀이 규칙 자체를 회피하게 된다. 그래서 꼭 필요한 경계만 남겼다. 예를 들어 접근성/상태/토큰 계약처럼 사용자 경험에 직접 영향을 주는 항목은 강하게 고정하고, 레이아웃 조합처럼 실험이 필요한 영역은 비교적 유연하게 열어뒀다.
+
+또한 시스템 위반을 사람의 의지에 맡기지 않으려고 했다. 리뷰에서만 지적하면 타이밍이 늦다. 그래서 가능한 항목은 정적 검사나 스토리 검증 단계에서 미리 잡도록 바꿨다. 개발자가 실수하지 않게 만드는 것이 아니라, 실수가 바로 드러나게 만드는 방향이다.
+
+제가 반성한 부분도 있다. 초기에 토큰 네이밍을 너무 기술 중심으로 잡아 디자이너와 대화가 어려웠다. 이후에는 의미 중심 네이밍으로 바꾸고, 용어 사전을 문서에 같이 붙여 협업 비용을 줄였다. 이 작은 작업이 의외로 큰 차이를 만들었다.
+
+## 다음 분기 개선 백로그(요약)
+
+- 상태 시나리오 시각화 강화(에러/빈 상태 우선)
+- 토큰 변경 영향도 자동 리포트
+- 컴포넌트 승격/폐기 프로세스 명문화
+- 디자인/개발 공동 리뷰 슬롯 정례화
+- 실사용 데이터 기반 컴포넌트 정리
+
+저는 디자인 시스템을 결과물이 아니라 팀의 약속으로 보고 있다. 약속은 한 번 만들고 끝나는 게 아니라, 매 분기 다시 점검해야 유지된다는 점을 이번 작업에서 더 분명히 느꼈다.

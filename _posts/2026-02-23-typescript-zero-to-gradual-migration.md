@@ -69,3 +69,48 @@ PR이 타입 수정만으로 가득 차서 도메인 리뷰가 멈췄다.
 
 TS 전환은 문법 변경이 아니라,
 팀의 불확실성을 줄이는 장치였다.
+
+## TS 전환 로드맵을 정교화할 때 사용한 기준
+
+점진 전환이 실패하는 대표 패턴은 "규칙을 한 번에 올리는 것"이었다. 그래서 우리는 strict를 즉시 강제하지 않고, 도메인 경계별로 옵션을 단계적으로 상향했다. 기본 기준은 TypeScript 공식 문서의 strict 옵션과 null 안전성 문서였다([strict](https://www.typescriptlang.org/tsconfig/strict.html), [strictNullChecks](https://www.typescriptlang.org/tsconfig/strictNullChecks.html)).
+
+실행 순서는 이렇게 고정했다.
+
+1. API 응답 타입 고정
+2. 도메인 모델 타입 정리
+3. 공용 유틸/훅 타입화
+4. UI 컴포넌트 확장
+
+이 순서는 "런타임 장애를 먼저 줄이는 경계"를 기준으로 정한 것이다. 먼저 API 경계를 잡아두면 회귀 버그가 크게 줄고, 이후 컴포넌트 확장은 상대적으로 안전하다.
+
+빌드 시간 이슈를 줄이기 위해 프로젝트 참조도 도입했다. 타입 의존 그래프를 분리하면 전체 컴파일 비용을 낮추면서도 타입 계약을 유지할 수 있다([Project References](https://www.typescriptlang.org/docs/handbook/project-references)). 또한 `any`는 완전 금지 대신 부채 태그를 붙여 추적했고, 분기마다 감축 목표를 운영 지표로 관리했다.
+
+핵심은 타입 정확도 100%가 아니라 변경 안정성 향상이다. 팀이 체감한 효과는 문법 이득보다 리뷰 품질 개선에서 더 크게 나타났다. 이전에는 null 방어 코드 논의가 많았다면, 이후에는 도메인 규칙 논의가 중심이 됐다.
+
+## 참고자료
+- [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/intro.html)
+- [TSConfig - strict](https://www.typescriptlang.org/tsconfig/strict.html)
+- [TSConfig - strictNullChecks](https://www.typescriptlang.org/tsconfig/strictNullChecks.html)
+- [TypeScript - Project References](https://www.typescriptlang.org/docs/handbook/project-references)
+- [12-Factor App - Config](https://12factor.net/config)
+- [Google SRE Workbook - Error Budget Policy](https://sre.google/workbook/error-budget-policy/)
+
+## 제가 아직도 조심하는 타입 전환의 함정
+
+타입 전환을 몇 번 경험하고 나니, 기술적으로 어려운 부분보다 팀 심리와 일정 압박이 더 큰 변수라는 걸 느끼게 됐다. 특히 마감이 급할 때는 타입 오류를 억지로 누르고 넘어가고 싶은 유혹이 생긴다. 저 역시 과거에는 임시 조치를 남발한 적이 있었다. 당장은 빨랐지만, 다음 스프린트에서 그 비용이 더 크게 돌아왔다.
+
+그래서 지금은 "빠른 우회"를 하더라도 흔적을 남기는 원칙을 지키려고 한다. 예를 들어 임시 `any`를 쓸 때는 반드시 이유와 제거 시점을 코멘트로 남기고, 백로그에 추적 항목을 연결한다. 이 작업이 번거롭지만, 나중에 부채가 사라지지 않는 문제를 크게 줄여준다.
+
+또한 타입 도입의 목표를 100% 커버리지로 잡지 않는다. 처음에는 숫자를 올리는 데 집착했는데, 숫자가 높아도 중요한 경계(API 응답, 결제/예약 입력, 권한 모델)가 약하면 운영 안정성이 크게 좋아지지 않았다. 그래서 지금은 "어디가 가장 위험한 경계인가"를 먼저 묻고, 그 경계를 우선 잠근다.
+
+리뷰 방식도 바꿨다. 이전에는 타입 오류를 없애는 데 집중했지만, 지금은 타입이 도메인 의미를 제대로 전달하는지 본다. 이름이 애매하거나 union 경계가 과도하면, 오류가 없더라도 나중에 오해를 만든다. 이 지점은 아직도 개선 중이라, 팀과 함께 네이밍/도메인 모델링 규칙을 계속 다듬고 있다.
+
+## 타입 전환을 운영 가능한 수준으로 유지하는 체크리스트
+
+- 신규 API는 런타임 검증 + 타입 정의를 한 세트로 관리
+- 임시 타입(`any`, 단정 캐스팅)은 사유/만료일을 함께 기록
+- PR에서 타입 수정과 기능 수정을 분리해 리뷰 집중도 확보
+- 주요 도메인 타입은 소유자 명확화
+- 분기마다 타입 부채 감축률을 수치로 확인
+
+저는 아직 "완성된 방식"을 찾았다고 말할 수 없다. 다만 분명한 건, 타입 전환은 한 번의 캠페인이 아니라 팀 습관을 바꾸는 과정이라는 점이다. 그래서 앞으로도 속도와 엄격함 사이에서 균형을 계속 찾아가려고 한다.
