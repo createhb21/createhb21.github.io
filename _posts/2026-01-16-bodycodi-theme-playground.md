@@ -7,5 +7,3 @@ video: /assets/videos/bodycodi/bodycodi-playground.mp4
 poster: /assets/images/bodycodi/playground-thumbnail.jpg
 tags: [video, playground]
 ---
-
-...

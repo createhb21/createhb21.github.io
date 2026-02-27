@@ -17,13 +17,11 @@ AI 코딩 도구를 안 쓰는 개발자가 오히려 드물어진 시대다. Cu
 
 **Ralph Loop**이 바로 그 시도다. AI한테 같은 명령을 무한 반복 시켜서, 사람 개입 없이 계획 → 구현 → 테스트 → 커밋까지 알아서 돌아가게 만드는 기법이다.
 
-직접 세팅하고 돌려본 경험을 정리해보자.
+직접 세팅하고 돌려본 경험을 정리해본다.
 
 ---
 
 ## Ralph Loop이란?
-
-핵심은 놀라울 정도로 단순하다.
 
 ```bash
 while true; do
@@ -53,7 +51,7 @@ done
 
 <br/>
 
-## 세팅하기: ralph-playbook
+## 세팅하기
 
 Ralph Loop을 직접 세팅하는 방법은 여러 가지가 있는데, 여기서는 [ralph-playbook](https://github.com/ClaytonFarr/ralph-playbook)이라는 오픈소스 구현체를 기준으로 살펴보자. Clayton Farr라는 개발자가 Ralph 방법론을 Bash 스크립트로 깔끔하게 정리해놓은 저장소다.
 
@@ -141,7 +139,7 @@ my-project/
 
 <br/>
 
-## 실행: 2단계 워크플로우
+## 실행
 
 ### Step 1. 계획 모드
 
@@ -183,7 +181,7 @@ my-project/
 
 위에서 살펴본 ralph-playbook은 파일을 직접 복사하고 셸 스크립트를 실행하는 방식이다. 좀 더 간편한 방법도 있다.
 
-### 방법 1: Claude Code 공식 Ralph Wiggum 플러그인
+### 방법 1
 
 Claude Code에는 공식 Ralph Wiggum 플러그인이 내장되어 있다. 별도 설치 없이 바로 사용할 수 있다.
 
@@ -207,12 +205,12 @@ Claude Code에는 공식 Ralph Wiggum 플러그인이 내장되어 있다. 별�
 
 주요 옵션:
 
-| 옵션 | 설명 | 기본값 |
-|---|---|---|
-| `--max-iterations <n>` | 최대 반복 횟수 (안전 장치) | 무제한 |
-| `--completion-promise "<텍스트>"` | 작업 완료를 알리는 문구 | 없음 |
+| 옵션                              | 설명                       | 기본값 |
+| --------------------------------- | -------------------------- | ------ |
+| `--max-iterations <n>`            | 최대 반복 횟수 (안전 장치) | 무제한 |
+| `--completion-promise "<텍스트>"` | 작업 완료를 알리는 문구    | 없음   |
 
-### 방법 2: frankbria/ralph-claude-code
+### 방법 2
 
 좀 더 풍부한 기능이 필요하다면 [ralph-claude-code](https://github.com/frankbria/ralph-claude-code)라는 독립 프레임워크도 있다. 모니터링, 프로젝트 스캐폴딩 등이 포함되어 있다.
 
@@ -244,7 +242,7 @@ tmux 기반 모니터링이 내장되어 있어서 Ralph가 뭘 하고 있는지
 
 ### 어떤 방법을 선택할까?
 
-정리하면 이렇다.
+선택 기준을 내 식으로 줄여보면 이렇다.
 
 - **빠르게 써보고 싶다면** → Claude Code 공식 플러그인 (`/ralph-loop`)
 - **파일 구조를 직접 제어하고 싶다면** → ralph-playbook

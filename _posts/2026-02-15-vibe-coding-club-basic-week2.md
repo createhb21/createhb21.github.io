@@ -6,7 +6,6 @@ categories: [400-area]
 tags: [ai, no-code, n8n, automation, docker, vibe-coding, workflow]
 description: "바이브 코딩 클럽 Basic 코스 2주차 내용 정리. No Code 자동화 도구의 개념과 n8n 설치부터 간단한 워크플로우 실습까지 다룬다."
 ---
-
 <img src="https://github.com/user-attachments/assets/a63a5562-4143-4ac5-80ec-39fab8887315" />
 
 _[vibe-coding-club.vercel.app](https://club-house-sigma.vercel.app/)_
@@ -148,18 +147,18 @@ Telegram 봇을 통해 메시지를 받으면 자동으로 응답하거나, 다�
 
 ## 2주차를 마치며
 
-No Code(또는 Low Code) 자동화 도구의 핵심은 **반복 업무를 시스템에 맡기는 것**이다. 1주차에서 AI 에이전트에게 구조적으로 일을 시키는 법을 배웠다면, 2주차에서는 그 에이전트가 일하는 환경을 자동화하는 법을 배운 셈이다.
+No Code(또는 Low Code) 자동화 도구에서 내가 크게 느낀 건 **반복 업무를 시스템에 맡기는 감각**이었다. 1주차에서 AI 에이전트에게 구조적으로 일을 시키는 법을 배웠다면, 2주차에서는 그 에이전트가 일하는 환경 자체를 자동화하는 법을 배운 셈이었다.
 
 n8n은 셀프 호스팅으로 무료 사용이 가능하고, Docker로 간단히 설치할 수 있다. 처음에는 간단한 워크플로우부터 시작해서, 점차 복잡한 자동화 파이프라인으로 확장해보면 좋다.
 
-다음 주에는 더 심화된 에이전트 활용법을 다룰 예정이다.
+다음 시간에는 더 심화된 에이전트 활용으로 넘어갈 텐데, 그 전에 n8n으로 작은 자동화 하나쯤은 꼭 실제로 굴려보고 싶다.
 
 ---
 
-### 핵심 요약
+### 짧은 메모
 
 - **No Code 자동화**: 코드 없이 드래그 앤 드롭으로 업무 자동화 구성
 - **n8n**: 오픈소스 자동화 도구. Docker로 셀프 호스팅하면 평생 무료
 - **Docker**: 컨테이너 기반 가상화 도구. n8n을 로컬에서 실행하기 위해 필요
 - **노드**: n8n의 기본 작업 단위. Trigger → Action → 연동 노드로 워크플로우 구성
-- **핵심 교훈**: n8n은 "No Code"라는 이름이지만 실제로는 JavaScript가 필요한 Low Code 도구
+- **결론**: n8n은 "No Code"라는 이름과 달리, 실제로는 JavaScript가 필요한 Low Code 도구에 가깝다

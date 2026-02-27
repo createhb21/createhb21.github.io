@@ -8,6 +8,6 @@ poster: /assets/images/coconut-silo/daily-log2-thumbnail.png
 tags: [video, lexical]
 ---
 
-2022년 겨울 일상...
+2022년 겨울 일상…
 
 코코넛 사일로에서 일하는 동안 많이 배우고 행복했다.

@@ -6,5 +6,3 @@ categories: [100-private-log]
 thumbnail: /assets/images/etc/home/desk-decoration-thumbnail.jpg
 tags: [desk-decoration]
 ---
-
-오랜만에 데스크를 꾸며보았어요.
