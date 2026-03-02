@@ -4,8 +4,9 @@ title: "AI 에이전트 입문: P-C-T-C 프롬프트 설계"
 date: 2026-02-15 18:00:00 +0900
 categories: [400-area]
 tags: [ai, agent, prompt-engineering, vibe-coding, llm, cot, structured-prompt]
-description: "바이브 코딩 클럽 Basic 코스 1주차 내용 정리. AI 에이전트의 개념부터 구조적 프롬프트 설계(P-C-T-C), Chain of Thought까지 실습과 함께 다룬다."
+description: "바이브 코딩 클럽. AI 에이전트의 개념부터 구조적 프롬프트 설계(P-C-T-C), Chain of Thought"
 ---
+
 <img src="https://github.com/user-attachments/assets/a63a5562-4143-4ac5-80ec-39fab8887315" />
 
 _[vibe-coding-club.vercel.app](https://club-house-sigma.vercel.app/)_
@@ -14,7 +15,7 @@ _[vibe-coding-club.vercel.app](https://club-house-sigma.vercel.app/)_
 
 AI한테 "알아서 해줘"라고 던지면 어떻게 될까? 십중팔구 두루뭉술한 답변이 돌아온다. 에이전트 시대가 왔다고 하는데, 정작 제대로 시키는 법을 아는 사람은 많지 않다.
 
-바이브 코딩 클럽 Basic 코스 1주차는 바로 이 지점에서 출발한다. AI 에이전트가 뭔지, 왜 지금 중요한지, 그리고 어떻게 시켜야 제대로 일하는지를 다뤄보려 한다. 단순한 개념 강의가 아니라, 직접 프롬프트를 설계하고 결과를 확인하는 실습 중심 구성이다.
+바이브 코딩 클럽은 바로 이 지점에서 출발한다. AI 에이전트가 뭔지, 왜 지금 중요한지, 그리고 어떻게 시켜야 제대로 일하는지를 다뤄보려 한다. 단순한 개념 강의가 아니라, 직접 프롬프트를 설계하고 결과를 확인하는 실습 중심 구성이다.
 
 ---
 

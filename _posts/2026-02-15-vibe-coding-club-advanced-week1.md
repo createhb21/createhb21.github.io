@@ -1,11 +1,12 @@
 ---
 layout: post
-title: "에이전트 아키텍처와 MCP: ReAct부터 Function Calling까지"
+title: "에이전트 아키텍처와 MCP"
 date: 2026-02-15 21:00:00 +0900
 categories: [400-area]
 tags: [ai, agent, react-loop, function-calling, mcp, llm, vibe-coding, gemini]
-description: "바이브 코딩 클럽 Advanced 코스 1주차 내용 정리. ReAct 루프, Function Calling 원리, Raw Function Calling 구현, 그리고 MCP 아키텍처까지 에이전트의 내부 동작을 파헤친다."
+description: "바이브 코딩 클럽. ReAct 루프, Function Calling 원리, Raw Function Calling 구현, 그리고 MCP 아키텍처까지 에이전트의 내부 동작을 파헤친다."
 ---
+
 <img src="https://github.com/user-attachments/assets/a63a5562-4143-4ac5-80ec-39fab8887315" />
 
 _[vibe-coding-club.vercel.app](https://club-house-sigma.vercel.app/)_

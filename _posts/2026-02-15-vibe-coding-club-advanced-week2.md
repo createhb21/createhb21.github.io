@@ -4,8 +4,9 @@ title: "멀티모달 AI와 네이티브 추론 원리"
 date: 2026-02-15 22:00:00 +0900
 categories: [400-area]
 tags: [ai, multimodal, sora, notebooklm, gemini, transformer, vibe-coding]
-description: "바이브 코딩 클럽 Advanced 코스 2주차 내용 정리. 멀티모달 AI의 개념, 네이티브 멀티모달 추론의 내부 구조(인코딩, 크로스모달 어텐션), 그리고 Sora/NotebookLM/Gemini Storybook 실습까지 다룬다."
+description: "바이브 코딩 클럽. 멀티모달 AI의 개념, 네이티브 멀티모달 추론의 내부 구조(인코딩, 크로스모달 어텐션), 그리고 Sora/NotebookLM/Gemini Storybook 실습까지 다룬다."
 ---
+
 <img src="https://github.com/user-attachments/assets/a63a5562-4143-4ac5-80ec-39fab8887315" />
 
 _[vibe-coding-club.vercel.app](https://club-house-sigma.vercel.app/)_

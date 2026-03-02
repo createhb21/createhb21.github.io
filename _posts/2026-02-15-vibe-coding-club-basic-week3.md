@@ -4,8 +4,9 @@ title: "Suno로 만드는 AI 음악 콘텐츠 실습"
 date: 2026-02-15 20:00:00 +0900
 categories: [400-area]
 tags: [ai, suno, music, content-creation, vibe-coding, generative-ai]
-description: "바이브 코딩 클럽 Basic 코스 3주차 내용 정리. Suno AI를 활용한 음악 제작 실습과 AI 콘텐츠 생성의 가능성을 다룬다."
+description: "바이브 코딩 클럽. Suno AI를 활용한 음악 제작 실습과 AI 콘텐츠 생성의 가능성을 다룬다."
 ---
+
 <img src="https://github.com/user-attachments/assets/a63a5562-4143-4ac5-80ec-39fab8887315" />
 
 _[vibe-coding-club.vercel.app](https://club-house-sigma.vercel.app/)_

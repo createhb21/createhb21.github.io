@@ -4,8 +4,9 @@ title: "n8n으로 시작하는 노코드 자동화 입문"
 date: 2026-02-15 19:00:00 +0900
 categories: [400-area]
 tags: [ai, no-code, n8n, automation, docker, vibe-coding, workflow]
-description: "바이브 코딩 클럽 Basic 코스 2주차 내용 정리. No Code 자동화 도구의 개념과 n8n 설치부터 간단한 워크플로우 실습까지 다룬다."
+description: "바이브 코딩 클럽. No Code 자동화 도구의 개념과 n8n 설치부터 간단한 워크플로우 실습까지 다룬다."
 ---
+
 <img src="https://github.com/user-attachments/assets/a63a5562-4143-4ac5-80ec-39fab8887315" />
 
 _[vibe-coding-club.vercel.app](https://club-house-sigma.vercel.app/)_
