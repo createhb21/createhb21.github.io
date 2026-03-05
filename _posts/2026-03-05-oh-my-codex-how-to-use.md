@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "oh-my-codex 전체 운영 가이드: 설치부터 팀 파이프라인까지"
-date: 2026-03-05 18:40:00 +0900
+title: "oh-my-codex 사용 방법"
+date: 2026-03-05 15:40:00 +0900
 categories: [400-area]
 tags: [oh-my-codex, codex-cli, team, ralph, workflow]
-description: "oh-my-codex를 처음 붙일 때 필요한 설치, 명령 체계, 모드 선택, 상태 관리, 팀 파이프라인, 트러블슈팅까지 한 번에 정리한 실전 운영 가이드."
+description: "oh-my-codex를 처음 붙일 때 필요한 설치, 명령 체계, 모드 선택, 상태 관리, 팀 파이프라인, 트러블슈팅까지 한 번에 정리한 실전 사용 가이드."
 ---
 
 oh-my-codex(OMX)는 Codex CLI를 "한 명짜리 도구"에서 "여러 에이전트를 굴리는 작업 시스템"으로 바꿔주는 레이어다.  
@@ -12,7 +12,7 @@ oh-my-codex(OMX)는 Codex CLI를 "한 명짜리 도구"에서 "여러 에이전�
 
 - 공식 문서: https://yeachan-heo.github.io/oh-my-codex-website/docs.html
 
-## 1) 큰 그림: OMX를 언제 켜야 하는가
+## 1) OMX를 언제 켜야 하는가
 
 작업이 커질수록 병목은 코딩이 아니라 조율에서 생긴다.  
 범위 정리, 병렬 실행, 마감 검증을 섞어서 처리하면 재작업이 늘어난다.
@@ -25,7 +25,7 @@ OMX는 이 과정을 모드로 나눈다.
 - 단건 자동화: `autopilot`
 - 운영 보조: `trace`, `note`, `cancel`, `ecomode`
 
-## 2) 설치와 시작 점검: setup → doctor → help
+## 2) 설치 및 시작
 
 처음 도입할 때는 아래 순서를 고정해두면 실수가 줄어든다.
 
@@ -39,7 +39,7 @@ omx help
 - `doctor`: 실행 환경 점검
 - `help`: 사용 가능한 명령 확인
 
-## 3) 입력 방식부터 구분하기: `$skill` vs `omx ...`
+## 3) `$skill` vs `omx ...`
 
 `$ralplan`, `$team`은 **Codex 대화 입력창**에서 쓰는 스킬 호출이고,  
 `omx team ...`은 **터미널**에서 실행하는 CLI 명령이다.
@@ -65,7 +65,7 @@ omx help
 
 의도는 같아도 입력 채널이 다르다는 점만 기억하면 된다.
 
-## 4) 모드 선택 기준: 한 줄 요약표
+## 4) 모드 선택 기준
 
 - `plan`: 범위가 모호할 때 분해부터
 - `ralplan`: 합의형 계획(Planner-Architect-Critic)
@@ -76,7 +76,7 @@ omx help
 - `ecomode`: 비용/토큰 절약 모드
 - `cancel`: 활성 모드 종료
 
-## 5) 모델 라우팅과 delegation: 왜 역할을 나누는가
+## 5) 모델 라우팅과 delegation
 
 핵심은 역할 분리다.
 
@@ -86,7 +86,7 @@ omx help
 
 실전에서는 보통 `explore -> executor -> test-engineer -> architect/critic` 순으로 배치한다.
 
-## 6) 상태 지속성과 MCP 도구: 중간에 멈춰도 이어가기
+## 6) 상태 지속성과 MCP 도구
 
 OMX는 `.omx/`에 상태를 남긴다.
 
@@ -103,7 +103,7 @@ OMX는 `.omx/`에 상태를 남긴다.
 - `ast_grep_search`, `ast_grep_replace`
 - `trace_summary`, `trace_timeline`
 
-## 7) Team 파이프라인은 이렇게 읽으면 쉽다
+## 7) Team 파이프라인
 
 문서의 canonical 흐름은 아래다.
 
@@ -123,13 +123,13 @@ OMX는 `.omx/`에 상태를 남긴다.
 종료 상태는 `complete`, `failed`, `cancelled`로 구분한다.  
 중단할 때는 `cancel`로 `cancelled`를 남기고 종료한다.
 
-## 8) 실전 패턴 4가지
+## 8) 실전 패턴
 
 `ralplan -> team -> ralph`는 대표 패턴이지만 정답은 하나가 아니다.
 
-1. 요구가 크고 모호함: `ralplan -> team -> ralph`  
-2. 범위가 작고 단순함: `autopilot` 또는 `autopilot -> ralph`  
-3. 독립 이슈 다건: `ultrawork` 중심 + 필요 시 `team`  
+1. 요구가 크고 모호함: `ralplan -> team -> ralph`
+2. 범위가 작고 단순함: `autopilot` 또는 `autopilot -> ralph`
+3. 독립 이슈 다건: `ultrawork` 중심 + 필요 시 `team`
 4. 범위가 명확한 수정: `team` 또는 `ralph` 바로 진입
 
 막히면 순서대로 확인하면 된다.
