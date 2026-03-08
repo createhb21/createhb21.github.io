@@ -10,7 +10,7 @@ description: "oh-my-codex를 처음 붙일 때 필요한 설치, 명령 체계, 
 oh-my-codex(OMX)는 Codex CLI를 "한 명짜리 도구"에서 "여러 에이전트를 굴리는 작업 시스템"으로 바꿔주는 레이어다.  
 기능이 많아서 처음엔 헷갈리기 쉽다. 이 글은 기능 이름보다 **언제 무엇을 고르면 되는지** 중심으로 정리했다.
 
-- 공식 문서: https://yeachan-heo.github.io/oh-my-codex-website/docs.html
+- [oh-my-codex](https://yeachan-heo.github.io/oh-my-codex-website/docs.html)
 
 ## 1) OMX를 언제 켜야 하는가
 
