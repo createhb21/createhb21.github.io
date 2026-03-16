@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "프론트엔드 통신 설계"
+title: "실패를 기본값으로 삼는 프론트엔드 통신 설계"
 date: 2026-03-16 12:00:00 +0900
 categories: [400-area]
 tags:
