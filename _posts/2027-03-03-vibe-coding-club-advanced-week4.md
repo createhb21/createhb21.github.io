@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Sandbox와 동적 코드 실행"
-date: 2026-03-02 22:00:00 +0900
+date: 2027-03-02 22:00:00 +0900
 categories: [400-area]
 tags:
   [

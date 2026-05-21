@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Understanding Tomcat"
-date: 2026-01-13 15:00:00 +0900
+date: 2027-01-13 15:00:00 +0900
 categories: [300-project]
 tags: [react, jsp, legacy, tomcat]
 description: "Tomcat은 JSP 파일을 HTML로 변환해주는 서버 프로그램이다. React 개발자 관점에서 Node.js와 비교하며 쉽게 이해해보자."

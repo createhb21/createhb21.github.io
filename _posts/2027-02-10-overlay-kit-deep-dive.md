@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Toss overlay-kit 소스코드 뜯어보기: 모달을 우아하게 다루는 구조의 비밀"
-date: 2026-02-10 12:30:00 +0900
+date: 2027-02-10 12:30:00 +0900
 categories: [400-area]
 tags: [react, overlay, modal, architecture, toss, open-source, frontend]
 ---
@@ -251,9 +251,9 @@ function App() {
 
 ```ts
 function isClientEnvironment() {
-  const isBrowser = typeof document !== 'undefined';
-  const isReactNative = typeof navigator !== 'undefined'
-    && navigator.product === 'ReactNative';
+  const isBrowser = typeof document !== "undefined";
+  const isReactNative =
+    typeof navigator !== "undefined" && navigator.product === "ReactNative";
   return isBrowser || isReactNative;
 }
 ```
@@ -434,6 +434,7 @@ overlay.open(({ isOpen, close, unmount }) => (
 `close()`가 호출되면 `isOpen`이 `false`가 되면서 퇴장 애니메이션이 시작된다. 하지만 컴포넌트는 DOM에 여전히 존재한다. `AnimatePresence`의 `onExitComplete`가 호출되는 시점에 `unmount()`를 호출하면, 그때야 비로소 Reducer에서 `REMOVE` 액션이 처리되어 컴포넌트가 완전히 제거된다.
 
 만약 이 분리가 없었다면? 두 가지 중 하나를 선택해야 한다:
+
 - `close`와 동시에 DOM에서 제거 → 퇴장 애니메이션이 잘린다
 - `setTimeout`으로 제거를 지연 → 디바이스 성능에 따라 타이밍이 안 맞는다 (300ms? 500ms? 어떤 값이든 "정확한" 타이밍은 아니다)
 
@@ -478,15 +479,13 @@ const handleSelect = (item) => {
 ```tsx
 async function handleFlow() {
   // 1단계: 확인
-  const confirmed = await overlay.openAsync<boolean>(
-    ({ isOpen, close }) => (
-      <ConfirmDialog
-        isOpen={isOpen}
-        onNo={() => close(false)}
-        onYes={() => close(true)}
-      />
-    ),
-  );
+  const confirmed = await overlay.openAsync<boolean>(({ isOpen, close }) => (
+    <ConfirmDialog
+      isOpen={isOpen}
+      onNo={() => close(false)}
+      onYes={() => close(true)}
+    />
+  ));
 
   if (!confirmed) return;
 
@@ -585,8 +584,8 @@ overlay-kit의 기본 사용법만 보면 싱글톤이다. `overlay` 객체가 �
 
 ```ts
 // 기본 싱글톤
-export const { overlay, OverlayProvider, useCurrentOverlay, useOverlayData }
-  = createOverlayProvider();
+export const { overlay, OverlayProvider, useCurrentOverlay, useOverlayData } =
+  createOverlayProvider();
 ```
 
 하지만 소스코드를 더 보면, `experimental_createOverlayContext()`라는 팩토리 함수가 있다:

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "oh-my-codex 사용 방법"
-date: 2026-03-05 15:40:00 +0900
+date: 2027-03-05 15:40:00 +0900
 categories: [400-area]
 tags: [oh-my-codex, codex-cli, team, ralph, workflow]
 description: "oh-my-codex를 처음 붙일 때 필요한 설치, 명령 체계, 모드 선택, 상태 관리, 팀 파이프라인, 트러블슈팅까지 한 번에 정리한 실전 사용 가이드."

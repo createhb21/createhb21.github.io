@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "에이전틱 워크플로우와 SDLC"
-date: 2026-02-16 22:00:00 +0900
+date: 2027-02-16 22:00:00 +0900
 categories: [400-area]
 tags: [ai, agent, workflow, sdlc, langgraph, claude-code, vibe-coding]
 description: "바이브 코딩 클럽 Advanced 3주차 정리. Agentic Workflow, Agent 아키텍처, SDLC와 AI, 실습 4종을 한 번에 정리했다."
