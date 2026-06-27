@@ -3,8 +3,6 @@ layout: default
 title: Home
 ---
 
-{% include intro.html %}
-
 <section class="main-content">
   <div class="container main-grid">
     <!-- 왼쪽: 타임라인 (PC) / 탭 콘텐츠 (모바일) -->
@@ -67,28 +65,6 @@ title: Home
         </ul>
       </div>
     </div>
-
-    <!-- 오른쪽: 카테고리 목록 (PC 전용) -->
-    <aside class="categories-section pc-only" id="categories-section">
-      <ul class="category-list">
-        {% for i in (0..6) %} {% assign cat = categories[i] %} {% assign
-        cat_name = category_names[i] %} {% assign cat_desc = category_descs[i]
-        %} {% assign post_count = 0 %} {% for post in site.posts %} {% if
-        post.categories contains cat %} {% assign post_count = post_count |
-        plus: 1 %} {% endif %} {% endfor %}
-        <li class="category-item">
-          <a
-            href="{{ site.baseurl }}/categories/{{ cat }}/"
-            class="category-link font-mono"
-          >
-            <span class="category-name">{{ cat_name }}</span>
-            <span class="category-count">({{ post_count }})</span>
-          </a>
-          <span class="category-desc">{{ cat_desc }}</span>
-        </li>
-        {% endfor %}
-      </ul>
-    </aside>
   </div>
 </section>
 
