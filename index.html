@@ -5,15 +5,9 @@ title: Home
 
 <section class="main-content">
   <div class="container main-grid">
-    <!-- 왼쪽: 타임라인 (PC) / 탭 콘텐츠 (모바일) -->
+    <!-- 타임라인 -->
     <div class="timeline-section" id="timeline-section">
-      <div class="tab-header mobile-only">
-        <button class="tab-btn active" data-tab="timeline">Timeline</button>
-        <button class="tab-btn" data-tab="categories">Categories</button>
-      </div>
-
-      <!-- Timeline 탭 콘텐츠 -->
-      <div class="tab-content active" id="timeline-content">
+      <div class="timeline-content" id="timeline-content">
         {% for post in site.posts %} {% unless post.next %}
         <h2 class="category-title font-mono">{{ post.date | date: '%Y' }}</h2>
         {% else %} {% capture year %}{{ post.date | date: '%Y' }}{% endcapture
@@ -35,61 +29,6 @@ title: Home
         </article>
         {% endfor %}
       </div>
-
-      <!-- Categories 탭 콘텐츠 (모바일 전용) -->
-      <div class="tab-content mobile-categories" id="mobile-categories-content">
-        <ul class="category-list">
-          {% assign categories =
-          "000-index,100-private-log,200-pick-up,300-project,400-area,500-entertainment,600-archive"
-          | split: "," %} {% assign category_names = "000 Index,100 Private
-          Log,200 Pick Up,300 Project,400 Area,500 Entertainment,600 Archive" |
-          split: "," %} {% assign category_descs = "아이디어 노트,일상
-          기록,정리된 학습 내용,주요 프로젝트,학습 중인
-          내용,독서/영화/영상물,보관된 자료" | split: "," %} {% for i in (0..6)
-          %} {% assign cat = categories[i] %} {% assign cat_name =
-          category_names[i] %} {% assign cat_desc = category_descs[i] %} {%
-          assign post_count = 0 %} {% for post in site.posts %} {% if
-          post.categories contains cat %} {% assign post_count = post_count |
-          plus: 1 %} {% endif %} {% endfor %}
-          <li class="category-item">
-            <a
-              href="{{ site.baseurl }}/categories/{{ cat }}/"
-              class="category-link font-mono"
-            >
-              <span class="category-name">{{ cat_name }}</span>
-              <span class="category-count">({{ post_count }})</span>
-            </a>
-            <span class="category-desc">{{ cat_desc }}</span>
-          </li>
-          {% endfor %}
-        </ul>
-      </div>
     </div>
   </div>
 </section>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const tabBtns = document.querySelectorAll(".tab-btn");
-    const timelineContent = document.getElementById("timeline-content");
-    const mobileCategoriesContent = document.getElementById(
-      "mobile-categories-content",
-    );
-
-    tabBtns.forEach((btn) => {
-      btn.addEventListener("click", function () {
-        tabBtns.forEach((b) => b.classList.remove("active"));
-        this.classList.add("active");
-
-        const tab = this.dataset.tab;
-        if (tab === "timeline") {
-          timelineContent.style.display = "block";
-          mobileCategoriesContent.style.display = "none";
-        } else {
-          timelineContent.style.display = "none";
-          mobileCategoriesContent.style.display = "block";
-        }
-      });
-    });
-  });
-</script>
